@@ -1,0 +1,57 @@
+ext {
+    toolVersions = [
+            android: [
+                    complileSdk : 31,
+                    gradlePlugin: '1.6.10',
+                    buildTools  : '7.0.4',
+                    minSdk      : 21,
+                    targetSdk   : '31'
+            ]
+    ]
+
+    livVersion = [
+            androidx   : [
+                    coreKtx         : '1.7.0',
+                    appcompat       : '1.4.0',
+                    constraintLayout: '2.1.2',
+                    work            : '2.7.1'
+            ],
+            google     : [
+                    material: '1.4.0'
+            ],
+            test       : [
+                    junit: '4.+'
+            ],
+            androidTest: [
+                    androidxJunit: '1.1.3',
+                    espresso     : '3.4.0'
+            ],
+            rx         : [
+                    rxKotlin : '3.0.1',
+                    rxjava3  : '3.1.3',
+                    rxandroid: '3.0.0'
+            ],
+            retrofit   : [
+                    retrofit     : '2.9.0',
+                    adapterRxjava: '2.9.0'
+            ]
+
+    ]
+
+    supportDependencies = [
+            coreKtx         : "androidx.core:core-ktx:${livVersion.androidx.coreKtx}",
+            appcompat       : "androidx.appcompat:appcompat:${livVersion.androidx.appcompat}",
+            material        : "com.google.android.material:material:${livVersion.google.material}",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:${livVersion.androidx.constraintLayout}",
+            junit           : "junit:junit:${livVersion.test.junit}",
+            androidxJunit   : "androidx.test.ext:junit:${livVersion.androidTest.androidxJunit}",
+            espresso        : "androidx.test.espresso:espresso-core:${livVersion.androidTest.espresso}",
+            rxjava3         : "io.reactivex.rxjava3:rxjava:${livVersion.rx.rxjava3}",
+            rxandroid       : "io.reactivex.rxjava3:rxandroid:${livVersion.rx.rxandroid}",
+            rxKotlin        : "io.reactivex.rxjava3:rxkotlin:${livVersion.rx.rxKotlin}",
+            retrofit        : "com.squareup.retrofit2:retrofit:${livVersion.retrofit.retrofit}",
+            converterGson   : "com.squareup.retrofit2:converter-gson:${livVersion.retrofit.retrofit}",
+            adapterRxjava   : "com.squareup.retrofit2:adapter-rxjava3:${livVersion.retrofit.adapterRxjava}",
+            work            : "androidx.work:work-runtime-ktx:${livVersion.androidx.work}"
+    ]
+}
